@@ -14,7 +14,7 @@ git clone https://github.com/SE-ABOSALIM/gitpeek.git
 ```
 2. Go into the project folder:
 ```bash
-cd Gitpeek-main
+cd gitpeek
 ```
 3. Open `index.html` in your browser (preferably via a local server, see Usage section)
 <br><br>
