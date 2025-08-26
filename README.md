@@ -33,7 +33,7 @@ python -m SimpleHTTPServer 8000
 ```
 3. Open your browser and go to:
 ```bash
-http://localhost:8000
+http://localhost:8000/Html
 ```
 ### Method 2
 1. Install the Live Server extension in VS Code.
