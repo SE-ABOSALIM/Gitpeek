@@ -1,46 +1,47 @@
-Gitpeek
+# Gitpeek
+**Gitpeek** is a simple tool to quickly search GitHub user profiles and display essential profile information. Its user-friendly interface lets you explore GitHub profiles instantly.
 
-Gitpeek is a simple tool to quickly search GitHub user profiles and display essential profile information. Its user-friendly interface lets you explore GitHub profiles instantly.
+## Features
+- Search GitHub profiles by username
+- Display profile picture, name, bio, and other basic info
+- Check all links and social usernames
+- Fast and easy-to-use interface
 
-Features
-
-Search GitHub profiles by username
-
-Display profile picture, name, bio, and other basic info
-
-Check all links and social URLs
-
-Fast and easy-to-use interface
-
-Installation
-
-Clone the repository:
-
-git clone https://github.com/yourusername/gitpeek.git
-
-
-Go into the project folder:
-
+## Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/SE-ABOSALIM/gitpeek.git
+```
+2. Go into the project folder:
+```bash
 cd gitpeek
+```
+3. Open `index.html` in your browser (preferably via a local server, see Usage section)
 
+## Usage
+To run the project correctly, you need to serve it via a local server instead of opening `index.html` directly. This is necessary because modern browsers block certain API requests (like GitHub API) when opening files directly.
 
-Install dependencies (if any):
+### Method 1
+1. Open a terminal in your project folder.
+2. Run one of the following commands:
+```bash
+python -m http.server 8000
+```
+#### Or
+```bash
+python -m SimpleHTTPServer 8000
+```
+3. Open your browser and go to:
+```bash
+http://localhost:8000
+```
 
-npm install
+### Method 2
+1. Install the Live Server extension in VS Code.
+2. Open the project folder in VS Code.
+3. Right-click on index.html → Select Open with Live Server.
+4. Your browser will open the project via a local server automatically.
 
-Usage
-
-Open the index.html file in your browser.
-
-Enter a GitHub username in the search box.
-
-Click the "Search" button to view the profile details.
-
-Contributing
-
-Contributions are welcome! Fork the project, make your changes, and submit a pull request.
-
-License
-
-This project is licensed under the MIT License. See the LICENSE
- file for details.
+## License
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for details.
