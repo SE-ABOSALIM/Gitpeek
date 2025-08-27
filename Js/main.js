@@ -27,11 +27,11 @@ async function getData() {
 
     if (result.ok) {
         return await result.json();
-    } else if (req.status === 404) {
+    } else if (result.status === 404) {
         throw new Error(errors.notFound);
-    } else if (req.status === 403) {
+    } else if (result.status === 403) {
         throw new Error(errors.forbidden);
-    } else if (req.status === 500) {
+    } else if (result.status === 500) {
         throw new Error(errors.server);
     } else {
         throw new Error(`${errors.other} (${result.status})`);
