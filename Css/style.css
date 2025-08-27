@@ -148,6 +148,10 @@ body {
         column-count: 2;
         column-gap: 30px;
     }
+
+    .error {
+        font-size: 12px;
+    }
 }
 
 @media screen and (min-width: 575px) and (max-width: 775px) {
@@ -165,5 +169,9 @@ body {
 
     .profile-container {
         width: 500px;
+    }
+
+    .error {
+        font-size: 14px;
     }
 }

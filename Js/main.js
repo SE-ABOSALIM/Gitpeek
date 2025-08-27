@@ -14,15 +14,9 @@ const errors = {
 async function getData() {
     const searchInputText = searchInput.value.trim();
 
-    if (!searchInputText) {
-        window.alert("Please Enter A Username");
-        return Promise.reject("Username is empty");
-    }
+    if (!searchInputText) throw new Error("Username field is empty. Please enter a username");
 
     const profileLink = "https://api.github.com/users/" + searchInputText;
-
-    // Getting the profile data using fetch async/await which is simpler 
-    // and giving better performance
     const result = await fetch(profileLink);
 
     if (result.ok) {
@@ -36,33 +30,6 @@ async function getData() {
     } else {
         throw new Error(`${errors.other} (${result.status})`);
     }
-
-    // Getting the profile data using XMLHttpRequest
-
-    // return new Promise((resolve, reject) => {
-    //     let req = new XMLHttpRequest();
-
-    //     req.onload = () => {
-    //         if (req.status === 200 && req.readyState === 4) {
-    //             const profile = JSON.parse(req.responseText);
-    //             resolve(profile);
-    //         } else if (req.status === 404) {
-    //             reject(errors.notFound);
-    //         } else if (req.status === 403) {
-    //             reject(errors.forbidden);
-    //         } else if (req.status === 500) {
-    //             reject(errors.server);
-    //         } else {
-    //             reject(`${errors.other} (${req.status})`);
-    //         }
-    //     };
-
-    //     req.onerror = () => reject("Network Error");
-    //     req.ontimeout = () => reject("Request Timeout");
-
-    //     req.open("GET", profileLink);
-    //     req.send();
-    // });
 }
 
 function handleProfileSearch() {
